@@ -1,4 +1,7 @@
 class TrackersController < ApplicationController
+  before_filter :admin_user, :except => [:track, :blocked]
+  require "pathname"
+  
   # GET /trackers
   # GET /trackers.xml
   def index
@@ -52,6 +55,13 @@ class TrackersController < ApplicationController
       end
     end
   end
+  
+  def track
+    @tracker = Tracker.find_or_create(params[:name])
+    @tracker.increment
+    file = Rails.root.join("public/images/pixel.gif").to_s
+    send_file file, :type => 'image/gif', :disposition => 'inline'
+  end
 
   # PUT /trackers/1
   # PUT /trackers/1.xml
@@ -80,4 +90,19 @@ class TrackersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def blocked
+    
+  end
+  
+  private
+  
+  def admin_user
+    if (params[:secret] == "derwiki")
+      return true
+    else
+      redirect_to(root_path)
+    end
+  end
+  
 end
