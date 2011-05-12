@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  count: 1
+  title: MyString
+  total_sent: 1
+
+two:
+  name: MyString
+  count: 1
+  title: MyString
+  total_sent: 1

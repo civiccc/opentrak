@@ -1,4 +1,6 @@
 Opentrak::Application.routes.draw do
+  resources :trackers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

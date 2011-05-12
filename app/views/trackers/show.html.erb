@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tracker.name %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @tracker.count %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @tracker.title %>
+</p>
+
+<p>
+  <b>Total sent:</b>
+  <%= @tracker.total_sent %>
+</p>
+
+
+<%= link_to 'Edit', edit_tracker_path(@tracker) %> |
+<%= link_to 'Back', trackers_path %>
