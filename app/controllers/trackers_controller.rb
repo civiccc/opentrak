@@ -5,7 +5,7 @@ class TrackersController < ApplicationController
   # GET /trackers
   # GET /trackers.xml
   def index
-    @trackers = Tracker.all
+    @trackers = Tracker.find(:all, :order => "id DESC")
 
     respond_to do |format|
       format.html # index.html.erb
