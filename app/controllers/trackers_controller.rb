@@ -42,9 +42,7 @@ class TrackersController < ApplicationController
 
   # POST /trackers
   # POST /trackers.xml
-  def create
-    raise request.env.inspect
-    
+  def create    
     @tracker = Tracker.new(params[:tracker])
 
     respond_to do |format|
@@ -59,6 +57,8 @@ class TrackersController < ApplicationController
   end
   
   def track
+    raise request.env.inspect
+    
     @tracker = Tracker.find_or_create(params[:name])
     
     # is there an existing one?
