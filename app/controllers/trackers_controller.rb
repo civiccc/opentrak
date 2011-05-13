@@ -107,8 +107,8 @@ class TrackersController < ApplicationController
   private
   
   def admin_user
-    if (params[:secret] == "derwiki")
-      return true
+    if (params[:secret] == "derwiki") || (cookies[:secret] = "derwiki")
+      cookies[:secret] = "derwiki"
     else
       redirect_to(root_path)
     end
