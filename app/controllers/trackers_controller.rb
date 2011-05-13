@@ -43,6 +43,8 @@ class TrackersController < ApplicationController
   # POST /trackers
   # POST /trackers.xml
   def create
+    raise request.env.inspect
+    
     @tracker = Tracker.new(params[:tracker])
 
     respond_to do |format|
