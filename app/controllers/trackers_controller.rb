@@ -57,7 +57,8 @@ class TrackersController < ApplicationController
   end
   
   def track
-    raise request.env.inspect
+    ip = env[‘HTTP_X_REAL_IP’] ||= env[‘REMOTE_ADDR’]     
+    raise ip.inspect
     
     @tracker = Tracker.find_or_create(params[:name])
     
