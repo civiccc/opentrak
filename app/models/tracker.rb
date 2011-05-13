@@ -18,6 +18,14 @@ class Tracker < ActiveRecord::Base
   def increment
     update_attribute(:count, count+1)
   end
+  
+  def open_rate
+    if(total_sent>0)
+      return (count / total_sent)*100
+    else
+      return 0
+    end
+  end
     
   def self.find_or_create(tracker_name)
     @tracker = Tracker.find_by_name(tracker_name)
