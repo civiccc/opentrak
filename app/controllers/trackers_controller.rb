@@ -57,7 +57,7 @@ class TrackersController < ApplicationController
   end
   
   def track
-    #raise request.env.to_yaml
+    raise request.env.to_yaml
     @tracker = Tracker.find_or_create(params[:name])
     
     # is there an existing one?
