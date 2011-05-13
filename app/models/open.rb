@@ -12,4 +12,5 @@
 #
 
 class Open < ActiveRecord::Base
+  belongs_to  :tracker
 end

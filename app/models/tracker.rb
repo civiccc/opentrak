@@ -13,6 +13,7 @@
 #
 
 class Tracker < ActiveRecord::Base
+  has_many  :opens, :dependent => :destroy
   
   def increment
     update_attribute(:count, count+1)

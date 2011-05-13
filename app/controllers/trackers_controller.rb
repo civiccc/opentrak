@@ -57,15 +57,15 @@ class TrackersController < ApplicationController
   end
   
   def track
-    raise env.inspect
+    ip = env["HTTP_X_FORWARDED_FOR"]
     
     @tracker = Tracker.find_or_create(params[:name])
     
     # is there an existing one?
-    @open = Open.find_by_tracker_id_and_ip(@tracker.id, request.env["REMOTE_ADDR"])
+    @open = Open.find_by_tracker_id_and_ip(@tracker.id, ip)
     if(@open.nil?)
       @tracker.increment
-      Open.create!(:tracker_id => @tracker.id, :ip => request.env["REMOTE_ADDR"])
+      Open.create!(:tracker_id => @tracker.id, :ip => ip)
     end
     
     file = Rails.root.join("public/images/pixel.gif").to_s
