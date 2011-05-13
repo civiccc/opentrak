@@ -1,0 +1,120 @@
+h1{
+   margin:15px 0;
+   font-size:2.7em;
+}
+
+#header{
+    background-color:#000;
+    margin-top:17px;
+}
+
+#header .stencil{
+    font-size:20px;
+}
+
+#header, #header a{
+    color:#fff;
+    margin-right:5px;
+}
+
+#header .last{
+    text-align:right;
+}
+
+.center{
+    text-align:center;
+}
+
+.large{
+    line-height:1.1em;
+}
+
+.full-width{
+    background-color:#000;
+    width:100%;
+    height:54px;
+}
+
+.huge-text{
+    font-size:5.0em;
+}
+
+.stencil {
+    font-family: 'Allerta Stencil', arial, serif;
+}
+
+.arvo {
+    font-family: 'Arvo', arial, serif;
+}
+
+.awesome{
+    background: #222;
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    text-shadow: 0 -1px 1px #222;
+    border-bottom: 1px solid #222;
+    position: relative;
+    cursor: pointer;
+    }
+
+#footer{
+    margin: 45px 0 25px 0;
+}
+
+.total{
+    font-weight:bold;
+    font-size:1.6em;
+    margin-top:10px;
+}
+
+.logo, .logo a{
+    font-size:22px;
+    margin-top:5px;
+    text-decoration:none;
+    color:#000;
+}
+
+.pagination{
+    margin: 10px 0;
+}
+
+.feature-list{
+    line-height:2.0em;
+    font-size:16px;
+}
+
+.no-underline{
+    text-decoration:none;
+}
+
+.actions input, form input.awesome{
+    background: #222;
+    border-color: #000;
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    font-size:1.2em;
+    font-weight: bold;
+    line-height: 1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    text-shadow: 0 -1px 1px #222;
+    border-bottom: 1px solid #222;
+    position: relative;
+    cursor: pointer;
+}
+
+.blue-background{
+    background-color:#b4d5fe;
+}
