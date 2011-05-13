@@ -1,0 +1,24 @@
+# == Schema Information
+# Schema version: 20110512235335
+#
+# Table name: opens
+#
+#  id         :integer         not null, primary key
+#  tracker_id :integer
+#  ip         :string(255)
+#  user_agent :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tracker_id: 1
+  ip: MyString
+  user_agent: MyString
+
+two:
+  tracker_id: 1
+  ip: MyString
+  user_agent: MyString

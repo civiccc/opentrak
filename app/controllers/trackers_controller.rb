@@ -57,8 +57,16 @@ class TrackersController < ApplicationController
   end
   
   def track
+    #raise request.env.to_yaml
     @tracker = Tracker.find_or_create(params[:name])
-    @tracker.increment
+    
+    # is there an existing one?
+    @open = Open.find_by_tracker_id_and_ip(@tracker.id, request.env["REMOTE_ADDR"])
+    if(@open.nil?)
+      @tracker.increment
+      Open.create!(:tracker_id => @tracker.id, :ip => request.env["REMOTE_ADDR"])
+    end
+    
     file = Rails.root.join("public/images/pixel.gif").to_s
     send_file file, :type => 'image/gif', :disposition => 'inline'
   end

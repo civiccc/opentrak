@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20110512235335
+#
+# Table name: trackers
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  count      :integer         default(0)
+#  title      :string(255)
+#  total_sent :integer         default(0)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Tracker < ActiveRecord::Base
   
   def increment

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110512231410) do
+ActiveRecord::Schema.define(:version => 20110512235335) do
+
+  create_table "opens", :force => true do |t|
+    t.integer  "tracker_id"
+    t.string   "ip"
+    t.string   "user_agent"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "trackers", :force => true do |t|
     t.string   "name"
