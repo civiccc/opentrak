@@ -21,7 +21,7 @@ class Tracker < ActiveRecord::Base
   
   def open_rate
     if(total_sent>0)
-      return (count / total_sent)*100
+      return (count.to_f / total_sent.to_f)*100
     else
       return 0
     end
