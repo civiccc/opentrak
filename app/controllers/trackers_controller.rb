@@ -57,11 +57,6 @@ class TrackersController < ApplicationController
   end
   
   def track
-<<<<<<< HEAD
-    raise request.remote_ip.inspect
-=======
-    raise request.env.to_yaml
->>>>>>> e2740dc952564aeda8444de8a72ac00fca342d41
     @tracker = Tracker.find_or_create(params[:name])
     
     # is there an existing one?
