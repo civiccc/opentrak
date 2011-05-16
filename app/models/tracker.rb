@@ -16,7 +16,7 @@ class Tracker < ActiveRecord::Base
   has_many  :opens, :dependent => :destroy
   
   def increment
-    update_attribute(:count, count+1)
+    update_attributes(:count => count+1, :views => views+1)
   end
   
   def open_rate

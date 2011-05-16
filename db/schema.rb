@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110516225451) do
+ActiveRecord::Schema.define(:version => 20110516230359) do
 
   create_table "opens", :force => true do |t|
     t.integer  "tracker_id"
