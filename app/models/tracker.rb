@@ -27,7 +27,7 @@ class Tracker < ActiveRecord::Base
     end
   end
     
-  def calc_total_views
+  def calculate_views
     x = 0
     opens.inject(0) do |a, b|
       x = a+b.count
