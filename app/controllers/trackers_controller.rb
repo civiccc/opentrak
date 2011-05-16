@@ -68,6 +68,7 @@ class TrackersController < ApplicationController
       Open.create!(:tracker_id => @tracker.id, :ip => ip, :count => 1)
     else
       # increment the count of the Open
+      @tracker.update_attribute(:views, @tracker.views+1)
       @open.update_attribute(:count, @open.count+1)
     end
     
