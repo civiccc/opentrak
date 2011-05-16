@@ -27,6 +27,15 @@ class Tracker < ActiveRecord::Base
     end
   end
     
+  def total_views
+    x = 0
+    opens.inject(0) do |a, b|
+      x = a+b.count
+    end
+    
+    return x
+  end
+  
   def self.find_or_create(tracker_name)
     @tracker = Tracker.find_by_name(tracker_name)
     
