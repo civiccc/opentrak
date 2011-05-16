@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110516213738) do
+ActiveRecord::Schema.define(:version => 20110516225451) do
 
   create_table "opens", :force => true do |t|
     t.integer  "tracker_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20110516213738) do
     t.integer  "total_sent", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "views",      :default => 0
   end
 
 end
