@@ -23,7 +23,7 @@ class Tracker < ActiveRecord::Base
     if(total_sent>0)
       return (count.to_f / total_sent.to_f)*100
     else
-      return 0
+      return 0.to_f
     end
   end
     
