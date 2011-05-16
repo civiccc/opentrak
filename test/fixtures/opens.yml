@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110512235335
+# Schema version: 20110516211824
 #
 # Table name: opens
 #
@@ -9,6 +9,7 @@
 #  user_agent :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  count      :integer         default(0)
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html

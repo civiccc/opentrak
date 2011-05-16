@@ -65,7 +65,10 @@ class TrackersController < ApplicationController
     @open = Open.find_by_tracker_id_and_ip(@tracker.id, ip)
     if(@open.nil?)
       @tracker.increment
-      Open.create!(:tracker_id => @tracker.id, :ip => ip)
+      Open.create!(:tracker_id => @tracker.id, :ip => ip, :count => 1)
+    else
+      # increment the count of the Open
+      @open.update_attribute(:count, @open.count+1)
     end
     
     file = Rails.root.join("public/images/pixel.gif").to_s
