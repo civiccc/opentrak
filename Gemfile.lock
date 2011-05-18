@@ -65,6 +65,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.27)
+    will_paginate (2.3.15)
 
 PLATFORMS
   ruby
@@ -73,3 +74,4 @@ DEPENDENCIES
   annotate-models
   rails (= 3.0.7)
   sqlite3
+  will_paginate
