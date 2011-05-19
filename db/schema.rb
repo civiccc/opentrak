@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110516230359) do
+ActiveRecord::Schema.define(:version => 20110519191049) do
 
   create_table "opens", :force => true do |t|
     t.integer  "tracker_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20110516230359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "views",      :default => 0
+    t.integer  "source_id"
   end
 
 end

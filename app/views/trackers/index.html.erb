@@ -4,7 +4,8 @@
   <tr>
     <th>Name</th>
 	<th>Title</th>
-    <th>Count</th>
+    <th>Source ID</th>
+	<th>Count</th>
 	<th>Total views</th>
     <th>Open Rate</th>
     <th>Total sent</th>
@@ -17,6 +18,7 @@
   <tr>
     <td><%= tracker.name %></td>
     <td><%= tracker.title %></td>
+	<td><%= tracker.source_id %></td>
 	<td><%= tracker.count %></td>
     <td><%= tracker.views %></td>
 	<td><%= tracker.open_rate.round(3) %>%</td>
