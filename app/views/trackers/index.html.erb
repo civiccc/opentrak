@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
 	<th>Title</th>
+	<th>Age</th>
     <th>Source ID</th>
 	<th>Count</th>
 	<th>Total views</th>
@@ -18,6 +19,7 @@
   <tr>
     <td><%= tracker.name %></td>
     <td><%= tracker.title %></td>
+	<td><%= time_ago_in_words(tracker.created_at) %></td>
 	<td><%= tracker.source_id %></td>
 	<td><%= tracker.count %></td>
     <td><%= tracker.views %></td>
