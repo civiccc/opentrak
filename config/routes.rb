@@ -1,4 +1,6 @@
 Opentrak::Application.routes.draw do
+  devise_for :users
+
   resources :trackers
   match 'track/:name' => 'trackers#track', :as => 'track_tracker'
   

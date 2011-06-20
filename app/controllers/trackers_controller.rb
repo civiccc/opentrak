@@ -5,7 +5,7 @@ class TrackersController < ApplicationController
   # GET /trackers
   # GET /trackers.xml
   def index
-    @trackers = Tracker.find(:all, :order => "id DESC").paginate(:page => params[:page], :per_page => 100)
+    @trackers = Tracker.find(:all, :order => "id DESC").paginate(:page => params[:page], :per_page => 40)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -105,16 +105,8 @@ class TrackersController < ApplicationController
   end
   
   def blocked
-    
-  end
-  
-  private
-  
-  def admin_user
-    if (params[:secret] == "derwiki") || (cookies[:secret] == "derwiki")
-      cookies[:secret] = "derwiki"
-    else
-      redirect_to(root_path)
+    if(user_signed_in? && current_user.admin?)
+      redirect_to trackers_path
     end
   end
   

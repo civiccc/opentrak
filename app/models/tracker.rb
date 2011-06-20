@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110512235335
+# Schema version: 20110620211711
 #
 # Table name: trackers
 #
@@ -10,6 +10,8 @@
 #  total_sent :integer         default(0)
 #  created_at :datetime
 #  updated_at :datetime
+#  views      :integer         default(0)
+#  source_id  :integer
 #
 
 class Tracker < ActiveRecord::Base
