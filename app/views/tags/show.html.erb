@@ -1,0 +1,9 @@
+<h1><%= @tag.name %></h1>
+<p><strong>Total sent:</strong> <%= @total_sent %></p>
+<p><strong>Opens:</strong> <%= @opens %></p>
+<p><strong>Open rate:</strong> <%= @open_rate %>%</p>
+	
+<h3>Trackers:</h3>
+<ul>
+	<%= render :partial => 'tracker', :collection => @trackers %>
+</ul>

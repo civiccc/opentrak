@@ -35,6 +35,10 @@
   <%= @tracker.total_sent %>
 </p>
 
+<p>
+  <b>Tags:</b>
+  <%= render :partial => 'tag', :collection => @tracker.tags %>
+</p>
 
 <%= link_to 'Edit', edit_tracker_path(@tracker) %> |
 <%= link_to 'Back', trackers_path %>

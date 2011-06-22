@@ -15,6 +15,7 @@
 #
 
 class Tracker < ActiveRecord::Base
+  acts_as_taggable
   has_many  :opens, :dependent => :destroy
   
   def increment

@@ -6,6 +6,7 @@ gem	'will_paginate'
 gem	'devise'
 gem 'rspec'
 gem 'rspec-rails'
+gem 'acts-as-taggable-on'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

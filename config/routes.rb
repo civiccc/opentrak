@@ -2,6 +2,8 @@ Opentrak::Application.routes.draw do
   devise_for :users
 
   resources :trackers
+  resources :tags
+  
   match 'track/:name' => 'trackers#track', :as => 'track_tracker'
   
   # The priority is based upon order of creation:
