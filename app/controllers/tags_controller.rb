@@ -10,7 +10,7 @@ class TagsController < ApplicationController
     @total_sent = @trackers.map(&:total_sent).inject{|a,b| a+b}
     @opens = @trackers.map(&:count).inject{|a,b| a+b}
     
-    if(@total_sent>0)
+    if(@total_sent>0 && @opens > 0)
       @open_rate = (@opens.to_f / @total_sent.to_f)*100.round(2)
     else
       @open_rate = 0
