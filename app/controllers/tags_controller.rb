@@ -12,7 +12,7 @@ class TagsController < ApplicationController
     
     if(@total_sent>0 && @opens > 0)
       @open_rate = (@opens.to_f / @total_sent.to_f)*100
-      @openrate = @open_rate.to_f.round(2)
+      @open_rate = @open_rate.to_f.round(2)
     else
       @open_rate = 0
     end
