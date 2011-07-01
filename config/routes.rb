@@ -1,4 +1,14 @@
 Opentrak::Application.routes.draw do
+  get "api/new"
+
+  get "api/edit"
+
+  get "api/destroy"
+
+  get "api/show"
+
+  get "api/index"
+
   devise_for :users
 
   resources :trackers
