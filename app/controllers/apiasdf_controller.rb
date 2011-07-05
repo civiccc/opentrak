@@ -1,0 +1,2 @@
+class ApiasdfController < ApplicationController
+end

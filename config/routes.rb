@@ -1,10 +1,15 @@
 Opentrak::Application.routes.draw do
+  
+  resources :access_tokens
+  
   devise_for :users
 
   resources :trackers
   resources :tags
   
   match 'track/:name' => 'trackers#track', :as => 'track_tracker'
+  
+  match 'api' => "api#post", :via => :post
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

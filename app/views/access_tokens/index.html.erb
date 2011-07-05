@@ -1,0 +1,29 @@
+<h1>Listing access_tokens</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Token</th>
+    <th>Active</th>
+    <th>Last access</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @access_tokens.each do |access_token| %>
+  <tr>
+    <td><%= access_token.user.email %></td>
+    <td><%= access_token.token %></td>
+    <td><%= access_token.active %></td>
+    <td><%= access_token.last_access %></td>
+    <td><%= link_to 'Show', access_token %></td>
+    <td><%= link_to 'Edit', edit_access_token_path(access_token) %></td>
+    <td><%= link_to 'Destroy', access_token, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Access token', new_access_token_path %>

@@ -18,8 +18,12 @@ class Tracker < ActiveRecord::Base
   acts_as_taggable
   has_many  :opens, :dependent => :destroy
   
-  def increment
-    update_attributes(:count => count+1, :views => views+1)
+  def increment(x=1)
+    update_attributes(:count => count+x, :views => views+x)
+  end
+  
+  def increment_sent(x=1)
+    update_attributes(:total_sent => total_sent+x)
   end
   
   def open_rate

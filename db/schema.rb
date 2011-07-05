@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110622205019) do
+ActiveRecord::Schema.define(:version => 20110701233142) do
+
+  create_table "access_tokens", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "token"
+    t.boolean  "active"
+    t.datetime "last_access"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "opens", :force => true do |t|
     t.integer  "tracker_id"

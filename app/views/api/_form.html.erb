@@ -1,0 +1,19 @@
+<%= form_for @a, :url => create_api_index_path do |a| %>
+
+<% if @a.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@a.errors.count, "error") %> prohibited this access token from being saved:</h2>
+
+    <ul>
+    <% @a.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="actions">
+  <%= a.submit %>
+</div>
+
+<% end %>

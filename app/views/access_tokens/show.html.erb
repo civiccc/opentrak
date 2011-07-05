@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @access_token.user_id %>
+</p>
+
+<p>
+  <b>Token:</b>
+  <%= @access_token.token %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @access_token.active %>
+</p>
+
+<p>
+  <b>Last access:</b>
+  <%= @access_token.last_access %>
+</p>
+
+
+<%= link_to 'Edit', edit_access_token_path(@access_token) %> |
+<%= link_to 'Back', access_tokens_path %>

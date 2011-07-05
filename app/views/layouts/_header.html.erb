@@ -7,7 +7,7 @@
   </div>
   <div class="span-12 last">
 		<% if user_signed_in? %>
-			Hey there <%= current_user.email %> | <%= link_to "Sign out", destroy_user_session_path%>
+			Hey there <%= current_user.email %> | <%= link_to "Sign out", destroy_user_session_path%> | <%= link_to "API", access_tokens_path %>
 		<% else %>
 			<%= link_to "Log in", new_user_session_path %> | <%= link_to "Sign up", new_user_registration_path %> 
 		<% end %>
