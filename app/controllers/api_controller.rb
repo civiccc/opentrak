@@ -14,6 +14,8 @@ class ApiController < ApplicationController
       else
         # increment the count
         @tracker.increment_sent(increment_by)
+        # update the stamp
+        @token.stamp_accessed
         # return success
         render :json => render_tracker(@tracker)
       end
@@ -38,8 +40,8 @@ class ApiController < ApplicationController
   end
   
   def valid_token
-    token = AccessToken.find_by_token(params[:access_token])
-    render :json => { :success => false, :error => "Invalid access token"}.to_json if token.nil? || !token.active?
+    @token = AccessToken.find_by_token(params[:access_token])
+    render :json => { :success => false, :error => "Invalid access token"}.to_json if @token.nil? || !@token.active?
   end
   
   def valid_tracker
