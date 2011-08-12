@@ -5,7 +5,7 @@ class TrackersController < ApplicationController
   # GET /trackers
   # GET /trackers.xml
   def index
-    @trackers = Tracker.find(:all, :order => "id DESC").paginate(:page => params[:page], :per_page => 40)
+    @trackers = Tracker.find(:all, :order => "id DESC").paginate(:page => params[:page], :per_page => 15)
 
     respond_to do |format|
       format.html # index.html.erb
